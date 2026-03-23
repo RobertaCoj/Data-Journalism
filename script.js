@@ -235,7 +235,7 @@ const chart2 = Plot.plot({
   color: { legend: true },
   marks: [
     Plot.barY(
-      nobelLaureates,
+      data,
       Plot.groupX({ y: "count" }, { x: "Category", fill: "Gender", tip: true })
     ),
     Plot.ruleY([0])
