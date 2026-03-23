@@ -233,15 +233,12 @@ import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot/+esm";
 // Create the second chart
 const chart2 = Plot.plot({
   color: { legend: true },
-  marginLeft: 57,
   marks: [
-    Plot.dot(
+    Plot.barY(
       nobelLaureates,
-      Plot.group(
-        { r: "count" },
-        { x: "Born country code", y: "Gender", stroke: "Gender", tip: true }
-      )
-    )
+      Plot.groupX({ y: "count" }, { x: "Category", fill: "Gender", tip: true })
+    ),
+    Plot.ruleY([0])
   ]
 });
 
