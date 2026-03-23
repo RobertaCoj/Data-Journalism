@@ -236,7 +236,7 @@ const chart2 = Plot.plot({
   marks: [
     Plot.barY(
       data,
-      Plot.groupX({ y: "count" }, { x: "Category", fill: "Gender", tip: true })
+      Plot.groupX({ y: "count" }, { x: "category", fill: "gender", tip: true })
     ),
     Plot.ruleY([0])
   ]
